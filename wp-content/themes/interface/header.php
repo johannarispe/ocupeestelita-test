@@ -54,7 +54,7 @@
 		 */
 		wp_head();
 	?>
-<?php echo "<script type='text/javascript' src='".get_template_directory_uri()."/js/jquery.bxslider.min.js'></script>" ?>
+<?php //echo "<script type='text/javascript' src='".get_template_directory_uri()."/js/jquery.bxslider.min.js'></script>" ?>
 
 <?php echo "<link href='".get_template_directory_uri()."/css/jquery.bxslider.css' rel='stylesheet' />" ?>
 
