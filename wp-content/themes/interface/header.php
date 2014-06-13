@@ -49,7 +49,8 @@
 		 */
 		do_action( 'interface_links' ); ?>
 
-<?php echo "<script type='text/javascript' src='.get_template_directory_uri().'/js/jquery.bxslider.min.js'></script>"?>
+<?php echo "<script type='text/javascript' src='".get_template_directory_uri().'/js/jquery.bxslider.min.js'></script>";
+?>
 
 <?php 
 		/** 
