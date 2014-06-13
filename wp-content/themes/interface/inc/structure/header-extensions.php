@@ -361,7 +361,7 @@ $header_images = get_uploaded_header_images();
 	foreach ($header_images as $key => $value) {
 		$alt = get_post_meta($value[attachment_id], '_wp_attachment_image_alt', true);
 		$images_data[] = wp_prepare_attachment_for_js( $value[attachment_id] );
-		print_r($images_data); 
+		echo $images_data->caption; 
 		echo "<li><img src=".$value[url]." alt=".$alt." /></li>";
 	}
 ?>
