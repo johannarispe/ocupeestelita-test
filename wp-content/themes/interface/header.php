@@ -48,7 +48,9 @@
 		 *
 		 */
 		do_action( 'interface_links' ); ?>
-<script type="text/javascript" src=<?php echo get_template_directory_uri();?>"/js/jquery.bxslider.min.js"></script>
+
+<?php echo "<script type='text/javascript' src='.get_template_directory_uri().'/js/jquery.bxslider.min.js'></script>"?>
+
 <?php 
 		/** 
 		 * This hook is important for WordPress plugins and other many things
