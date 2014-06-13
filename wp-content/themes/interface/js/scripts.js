@@ -36,4 +36,8 @@ jQuery( function() {
 				nav.toggleClass( 'toggled-on' );
 			} );
 		} )();
+
+jQuery(document).ready(function(){
+  jQuery('.bxslider').bxSlider();
+});
 } );

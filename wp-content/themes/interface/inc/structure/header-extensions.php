@@ -362,11 +362,6 @@ $header_images = get_uploaded_header_images();
 	}
 ?>
 </ul>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.bxslider').bxSlider();
-});
-</script>
 <?php endif; ?>
 
 
