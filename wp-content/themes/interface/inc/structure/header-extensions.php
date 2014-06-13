@@ -338,10 +338,17 @@ if (1 != $options['disable_top']) {
 </div>
 <!-- .info-bar -->
 <?php } ?>
+
+<!-- Header image -->
 <?php $header_image = get_header_image();
 			if( !empty( $header_image ) ) :?>
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> </a>
+
+
 <?php endif; ?>
+
+
+
+
 <div class="hgroup-wrap">
   <div class="container clearfix">
     <section id="site-logo" class="clearfix">
