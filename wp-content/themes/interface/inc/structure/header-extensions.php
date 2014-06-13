@@ -349,18 +349,10 @@ if (1 != $options['disable_top']) {
  * Image slider script
  * Johann Arispe 
  */
-function slider_scripts() {
-	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
-	$url_script = 'http://elpuntodecolor.com/ocupeestelita-test/wp-content/themes/interface/js/jquery.bxslider.min.js';
-	wp_enqueue_script( 'script-name', $url_script, array(), '1.0.0', true );
-}
-
-//add_action( 'wp_enqueue_scripts', 'slider_scripts' );
 
 $header_images = get_uploaded_header_images();
 
 ?>
-<?php echo get_template_directory_uri(); ?>
 
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> </a>
 
