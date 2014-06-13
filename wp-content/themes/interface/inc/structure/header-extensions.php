@@ -351,7 +351,7 @@ if (1 != $options['disable_top']) {
  */
 function slider_scripts() {
 	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
-	$url_script = INTERFACE_PARENT_URL.'/js/jquery.bxslider.min.js';
+	$url_script = 'http://elpuntodecolor.com/ocupeestelita-test/wp-content/themes/interface/js/jquery.bxslider.min.js';
 	wp_enqueue_script( 'script-name', $url_script, array(), '1.0.0', true );
 }
 
