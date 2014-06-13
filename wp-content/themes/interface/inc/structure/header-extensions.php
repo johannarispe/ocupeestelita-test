@@ -354,7 +354,7 @@ print_r($header_images);
 <ul class="bxslider">
 <?php 
 	foreach ($header_images as $key => $value) {
-		echo "<li><img src=".$value." /></li>";
+		echo "<li><img src=".$value[url]." /></li>";
 	}
 ?>
 </ul>
