@@ -344,6 +344,18 @@ if (1 != $options['disable_top']) {
 			if( !empty( $header_image ) ) :?>
 
 <?php 
+
+/**
+ * Image slider script
+ * Johann Arispe 
+ */
+function slider_scripts() {
+	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+	wp_enqueue_script( 'bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '1.0.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'slider_scripts' );
+
 $header_images = get_uploaded_header_images();
 
 print_r($header_images);

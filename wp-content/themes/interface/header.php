@@ -48,6 +48,7 @@
 		 *
 		 */
 		do_action( 'interface_links' ); ?>
+<script src="/js/jquery.bxslider.min.js"></script>
 <?php 
 		/** 
 		 * This hook is important for WordPress plugins and other many things
