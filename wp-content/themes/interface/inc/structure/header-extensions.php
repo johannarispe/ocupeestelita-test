@@ -358,7 +358,7 @@ $header_images = get_uploaded_header_images();
 	foreach ($header_images as $key => $value) {
 		$alt = get_post_meta($value[attachment_id], '_wp_attachment_image_alt', true);
 		$images_data = get_post( $value[attachment_id] );
-		echo "<li><img src=".$value[url]." alt=".$alt." title=".print_r($images_data->post_excerpt)." /></li>";
+		echo "<li><img src=".$value[url]." alt=".$alt." title=".$images_data->post_excerpt." /></li>";
 	}
 ?>
 </ul>
