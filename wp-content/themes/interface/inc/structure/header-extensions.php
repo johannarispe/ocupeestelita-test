@@ -349,13 +349,8 @@ if (1 != $options['disable_top']) {
  * Image slider script
  * Johann Arispe 
  */
-function slider_scripts() {
-echo "<script type='text/javascript' src='".get_template_directory_uri()."/js/jquery.bxslider.min.js'></script>";
-}
-add_action('wp_head', 'slider_scripts');
 
 $header_images = get_uploaded_header_images();
-
 ?>
 
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> </a>
@@ -367,10 +362,12 @@ $header_images = get_uploaded_header_images();
 	}
 ?>
 </ul>
-
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
 <?php endif; ?>
-
-
 
 
 <div class="hgroup-wrap">
