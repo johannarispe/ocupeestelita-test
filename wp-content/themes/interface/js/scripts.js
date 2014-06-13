@@ -42,7 +42,8 @@ jQuery(document).ready(function(){
   mode: 'fade',
   captions: true,
   speed: 600
-});
+  });
+
   slider.startAuto();
 });
 } );
