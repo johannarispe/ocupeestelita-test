@@ -38,6 +38,11 @@ jQuery( function() {
 		} )();
 
 jQuery(document).ready(function(){
-  jQuery('.bxslider').bxSlider();
+  slider = jQuery('.bxslider').bxSlider({
+  mode: 'fade',
+  captions: true,
+  speed: 400
+});
+  slider.startAuto();
 });
 } );
