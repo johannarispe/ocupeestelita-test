@@ -342,7 +342,16 @@ if (1 != $options['disable_top']) {
 <!-- Header image -->
 <?php $header_image = get_header_image();
 			if( !empty( $header_image ) ) :?>
+
+<?php 
+$header_images = get_uploaded_header_images();
+
+print_r($header_images);
+
+?>
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> </a>
+
+
 <?php endif; ?>
 
 
