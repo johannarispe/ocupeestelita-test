@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
   slider = jQuery('.bxslider').bxSlider({
   mode: 'fade',
   captions: true,
-  speed: 400
+  speed: 600
 });
   slider.startAuto();
 });

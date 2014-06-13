@@ -352,10 +352,14 @@ if (1 != $options['disable_top']) {
 
 $header_images = get_uploaded_header_images();
 ?>
+
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> </a>
+
 <ul class="bxslider">
 <?php 
 	foreach ($header_images as $key => $value) {
-		echo "<li><img src=".$value[url]." /></li>";
+		$alt = get_post_meta($value[attachment_id], '_wp_attachment_image_alt', true);
+		echo "<li><img src=".$value[url]." alt=".$alt." /></li>";
 	}
 ?>
 </ul>
