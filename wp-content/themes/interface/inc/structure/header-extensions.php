@@ -339,32 +339,6 @@ if (1 != $options['disable_top']) {
 <!-- .info-bar -->
 <?php } ?>
 
-<!-- Header image -->
-<?php $header_image = get_header_image();
-			if( !empty( $header_image ) ) :?>
-
-<?php 
-
-/**
- * Image slider script
- * Johann Arispe 
- */
-
-$header_images = get_uploaded_header_images();
-?>
-<ul class="bxslider">
-<?php 
-	$images_data = array();
-	foreach ($header_images as $key => $value) {
-		$alt = get_post_meta($value[attachment_id], '_wp_attachment_image_alt', true);
-		$images_data = get_post( $value[attachment_id] );
-		echo "<li><img src=".$value[url]." alt=".$alt." title='".$images_data->post_excerpt."' /></li>";
-	}
-?>
-</ul>
-<?php endif; ?>
-
-
 <div class="hgroup-wrap">
   <div class="container clearfix">
     <section id="site-logo" class="clearfix">
@@ -420,6 +394,30 @@ $header_images = get_uploaded_header_images();
   <!-- .container --> 
 </div>
 <!-- .hgroup-wrap -->
+
+<!-- Header image -->
+<?php 
+/**
+ * Image slider script
+ * Johann Arispe 
+ */
+$header_image = get_header_image();
+			if( !empty( $header_image ) ) :?>
+
+<?php 
+$header_images = get_uploaded_header_images();
+?>
+<ul class="bxslider">
+<?php 
+	$images_data = array();
+	foreach ($header_images as $key => $value) {
+		$alt = get_post_meta($value[attachment_id], '_wp_attachment_image_alt', true);
+		$images_data = get_post( $value[attachment_id] );
+		echo "<li><img src=".$value[url]." alt=".$alt." title='".$images_data->post_excerpt."' /></li>";
+	}
+?>
+</ul>
+<?php endif; ?>
 
 <?php	
 		if( 'above-slider' == $options[ 'slogan_position' ] &&  ( is_home() || is_front_page() ) ) 
